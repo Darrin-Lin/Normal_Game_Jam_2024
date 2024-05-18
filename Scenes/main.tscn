@@ -1,10 +1,14 @@
 [gd_scene load_steps=11 format=3 uid="uid://bounqyat3kfjb"]
 
 [ext_resource type="Script" path="res://Scripts/main.gd" id="1_t80yg"]
-[ext_resource type="Script" path="res://Scripts/maps.gd" id="3_krnt2"]
 [ext_resource type="Script" path="res://Scripts/arrows.gd" id="4_juxcj"]
 [ext_resource type="Texture2D" uid="uid://deolw346q432q" path="res://Assets/Images/up_arrow.png" id="5_7orqv"]
 [ext_resource type="Shader" path="res://Scripts/Shaders/arrow.gdshader" id="5_rwyxl"]
+
+[sub_resource type="GDScript" id="GDScript_uxl5o"]
+script/source = "extends Node
+
+"
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_2h2sf"]
 
@@ -28,7 +32,7 @@ shader_parameter/rgb = Color(1, 1, 1, 1)
 script = ExtResource("1_t80yg")
 
 [node name="Maps" type="Node" parent="."]
-script = ExtResource("3_krnt2")
+script = SubResource("GDScript_uxl5o")
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 

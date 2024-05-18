@@ -5,7 +5,7 @@ var map = 0
 # map: 0 empty, -1 wall 
 # door = 2 button = 3
 
-enum DIFF {
+enum DIFFICULTY {
 	EASY = 0,
 	NORMAL = 1
 }
@@ -33,7 +33,7 @@ var map_normal = [
 ]
 
 func select_map(difficulty):
-	if difficulty == DIFF.EASY:
+	if difficulty == DIFFICULTY.EASY:
 		return map_eazy
-	elif difficulty == DIFF.NORMAL:
+	elif difficulty == DIFFICULTY.NORMAL:
 		return map_normal
