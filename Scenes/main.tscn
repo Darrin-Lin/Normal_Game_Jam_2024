@@ -1,0 +1,52 @@
+[gd_scene load_steps=10 format=3 uid="uid://cp4m82g3v6und"]
+
+[ext_resource type="Script" path="res://Scripts/main.gd" id="1_t80yg"]
+[ext_resource type="Script" path="res://Scripts/maze.gd" id="2_vn5w8"]
+[ext_resource type="Script" path="res://Scripts/maps.gd" id="3_krnt2"]
+[ext_resource type="Script" path="res://Scripts/arrows.gd" id="4_juxcj"]
+[ext_resource type="Texture2D" uid="uid://deolw346q432q" path="res://Assets/Images/up_arrow.png" id="5_7orqv"]
+[ext_resource type="Texture2D" uid="uid://dlrlfdv4xiv0a" path="res://Assets/Images/down_arrow.png" id="6_pelrq"]
+[ext_resource type="Texture2D" uid="uid://bqvwl4iojxpyw" path="res://Assets/Images/left_arrow.png" id="7_uhi4o"]
+[ext_resource type="Texture2D" uid="uid://bp2wa43h3vvwa" path="res://Assets/Images/right_arrow.png" id="8_u3p2h"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_2h2sf"]
+load_path = "res://.godot/imported/background.png-98289422cd7d93003950872a7b97021f.ctex"
+
+[node name="main" type="Node2D"]
+script = ExtResource("1_t80yg")
+
+[node name="Maze" type="Node" parent="."]
+script = ExtResource("2_vn5w8")
+
+[node name="Maps" type="Node" parent="Maze"]
+script = ExtResource("3_krnt2")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="background" type="Sprite2D" parent="ParallaxBackground"]
+position = Vector2(400, 300)
+texture = SubResource("CompressedTexture2D_2h2sf")
+metadata/_edit_lock_ = true
+
+[node name="Arrows" type="Node" parent="."]
+script = ExtResource("4_juxcj")
+
+[node name="UpArrow" type="Sprite2D" parent="Arrows"]
+position = Vector2(400, 150)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("5_7orqv")
+
+[node name="DownArrow" type="Sprite2D" parent="Arrows"]
+position = Vector2(400, 450)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("6_pelrq")
+
+[node name="LeftArrow" type="Sprite2D" parent="Arrows"]
+position = Vector2(250, 300)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("7_uhi4o")
+
+[node name="RightArrow" type="Sprite2D" parent="Arrows"]
+position = Vector2(550, 300)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("8_u3p2h")
