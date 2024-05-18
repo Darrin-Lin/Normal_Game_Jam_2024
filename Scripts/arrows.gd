@@ -54,6 +54,8 @@ func _process(delta):
 		r_shader = sucess_color
 		right_arrow.material.set_shader_parameter("rgb",r_shader)
 		normal_color = sucess_color
+		if Input.is_action_just_pressed("ui_select"):
+			get_tree().change_scene_to_file("res://Scenes/draw.tscn")
 		
 	else:
 		if Input.is_action_just_pressed("ui_up"):
