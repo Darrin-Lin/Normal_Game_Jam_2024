@@ -17,7 +17,7 @@ var row
 var col
 
 func _ready():
-	map = $Maps.map_eazy
+	map = $Maps.select_map(Global.map)
 	row = map.size()
 	col = map[0].size()
 
