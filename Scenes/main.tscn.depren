@@ -1,29 +1,37 @@
-[gd_scene load_steps=12 format=3 uid="uid://bounqyat3kfjb"]
+[gd_scene load_steps=11 format=3 uid="uid://bounqyat3kfjb"]
 
 [ext_resource type="Script" path="res://Scripts/main.gd" id="1_t80yg"]
 [ext_resource type="Script" path="res://Scripts/maze.gd" id="2_vn5w8"]
 [ext_resource type="Script" path="res://Scripts/maps.gd" id="3_krnt2"]
 [ext_resource type="Script" path="res://Scripts/arrows.gd" id="4_juxcj"]
 [ext_resource type="Texture2D" uid="uid://deolw346q432q" path="res://Assets/Images/up_arrow.png" id="5_7orqv"]
-[ext_resource type="Shader" path="res://Scripts/Shaders/arrow.gdshader" id="5_rwyxl"]
+[ext_resource type="Shader" path="res://Scripts/Shaders/arrow.gdshader" id="5_y7h8q"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_2h2sf"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_1g5wd"]
-shader = ExtResource("5_rwyxl")
-shader_parameter/rgb = Color(1, 1, 1, 1)
+shader = ExtResource("5_y7h8q")
+shader_parameter/rgb = Color(1, 0, 0, 1)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_h08ak"]
-shader = ExtResource("5_rwyxl")
-shader_parameter/rgb = Color(1, 1, 1, 1)
+[sub_resource type="Shader" id="Shader_pr7xa"]
+code = "shader_type canvas_item;
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_qtx0o"]
-shader = ExtResource("5_rwyxl")
-shader_parameter/rgb = Color(1, 1, 1, 1)
+void vertex() {
+	// Called for every vertex the material is visible on.
+}
+
+void fragment() {
+	// Called for every pixel the material is visible on.
+}
+
+//void light() {
+	// Called for every pixel for every light affecting the CanvasItem.
+	// Uncomment to replace the default light processing function with this one.
+//}
+"
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_naaxl"]
-shader = ExtResource("5_rwyxl")
-shader_parameter/rgb = Color(1, 1, 1, 1)
+shader = SubResource("Shader_pr7xa")
 
 [node name="main" type="Node2D"]
 script = ExtResource("1_t80yg")
@@ -51,15 +59,12 @@ scale = Vector2(0.25, 0.25)
 texture = ExtResource("5_7orqv")
 
 [node name="DownArrow" type="Sprite2D" parent="Arrows"]
-material = SubResource("ShaderMaterial_h08ak")
-use_parent_material = true
 position = Vector2(400, 450)
 rotation = 3.14159
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("5_7orqv")
 
 [node name="LeftArrow" type="Sprite2D" parent="Arrows"]
-material = SubResource("ShaderMaterial_qtx0o")
 position = Vector2(250, 300)
 rotation = 4.71239
 scale = Vector2(0.25, 0.25)
