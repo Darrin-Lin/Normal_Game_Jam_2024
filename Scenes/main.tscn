@@ -1,16 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://bounqyat3kfjb"]
+[gd_scene load_steps=10 format=3 uid="uid://bounqyat3kfjb"]
 
 [ext_resource type="Script" path="res://Scripts/main.gd" id="1_t80yg"]
+[ext_resource type="Texture2D" uid="uid://dvv4ugwob1ikv" path="res://Assets/Images/background.png" id="2_tdyyr"]
 [ext_resource type="Script" path="res://Scripts/arrows.gd" id="4_juxcj"]
 [ext_resource type="Texture2D" uid="uid://deolw346q432q" path="res://Assets/Images/up_arrow.png" id="5_7orqv"]
 [ext_resource type="Shader" path="res://Scripts/Shaders/arrow.gdshader" id="5_rwyxl"]
-
-[sub_resource type="GDScript" id="GDScript_uxl5o"]
-script/source = "extends Node
-
-"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_2h2sf"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_1g5wd"]
 shader = ExtResource("5_rwyxl")
@@ -31,14 +25,11 @@ shader_parameter/rgb = Color(1, 1, 1, 1)
 [node name="main" type="Node2D"]
 script = ExtResource("1_t80yg")
 
-[node name="Maps" type="Node" parent="."]
-script = SubResource("GDScript_uxl5o")
-
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
 [node name="background" type="Sprite2D" parent="ParallaxBackground"]
 position = Vector2(400, 300)
-texture = SubResource("CompressedTexture2D_2h2sf")
+texture = ExtResource("2_tdyyr")
 metadata/_edit_lock_ = true
 
 [node name="Arrows" type="Node" parent="."]

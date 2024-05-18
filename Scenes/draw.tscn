@@ -1,8 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://iqv5mkgrqokh"]
+[gd_scene load_steps=6 format=3 uid="uid://iqv5mkgrqokh"]
 
 [ext_resource type="Texture2D" uid="uid://26x2e0fgcoun" path="res://Assets/Images/block_tilesheet.png" id="1_qhohx"]
 [ext_resource type="Script" path="res://Scripts/draw_path.gd" id="2_4ma84"]
-[ext_resource type="Script" path="res://Scripts/maps.gd" id="3_5dr0l"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yf4eu"]
 texture = ExtResource("1_qhohx")
@@ -23,9 +22,6 @@ load_path = "res://.godot/imported/background.png-98289422cd7d93003950872a7b9702
 tile_set = SubResource("TileSet_c8fa7")
 format = 2
 script = ExtResource("2_4ma84")
-
-[node name="Maps" type="Node" parent="TileMap"]
-script = ExtResource("3_5dr0l")
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
