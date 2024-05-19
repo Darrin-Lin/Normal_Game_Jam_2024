@@ -43,6 +43,9 @@ func _process(delta):
 			_move(Direction.RIGHT)
 		elif Input.is_action_just_pressed("reset"):
 			_reset_path()
+	else:
+		if Input.is_action_just_pressed("ui_select"):
+			get_tree().change_scene_to_file("res://Scenes/Start.tscn")
 
 func _draw_empty_maze():
 	var width  = get_viewport().size.x
