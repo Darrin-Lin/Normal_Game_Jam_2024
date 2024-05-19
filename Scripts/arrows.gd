@@ -26,6 +26,7 @@ var normal_color   = Vector4(1,1,1,1)
 const error_color  = Vector4(1,0,0,1)
 const sucess_color = Vector4(0,1,0,1)
 const door_color   = Vector4(0,0,1,1)
+const reset_color  = Vector4(0,1,1,1)
 
 
 func _ready():
@@ -58,6 +59,33 @@ func _process(delta):
 			get_tree().change_scene_to_file("res://Scenes/draw.tscn")
 		
 	else:
+		if Input.is_action_just_pressed("reset"):
+			var u_shader = up_arrow.material.get_shader_parameter("rgb")
+			u_shader = reset_color
+			up_arrow.material.set_shader_parameter("rgb",u_shader)
+			var d_shader = down_arrow.material.get_shader_parameter("rgb")
+			d_shader = reset_color
+			down_arrow.material.set_shader_parameter("rgb",d_shader)
+			var l_shader = left_arrow.material.get_shader_parameter("rgb")
+			l_shader = reset_color
+			left_arrow.material.set_shader_parameter("rgb",l_shader)
+			var r_shader = right_arrow.material.get_shader_parameter("rgb")
+			r_shader = reset_color
+			right_arrow.material.set_shader_parameter("rgb",r_shader)
+			_reset_path()
+		if Input.is_action_just_released("reset"):
+			var u_shader = up_arrow.material.get_shader_parameter("rgb")
+			u_shader = normal_color
+			up_arrow.material.set_shader_parameter("rgb",u_shader)
+			var d_shader = down_arrow.material.get_shader_parameter("rgb")
+			d_shader = normal_color
+			down_arrow.material.set_shader_parameter("rgb",d_shader)
+			var l_shader = left_arrow.material.get_shader_parameter("rgb")
+			l_shader = normal_color
+			left_arrow.material.set_shader_parameter("rgb",l_shader)
+			var r_shader = right_arrow.material.get_shader_parameter("rgb")
+			r_shader = normal_color
+			right_arrow.material.set_shader_parameter("rgb",r_shader)
 		if Input.is_action_just_pressed("ui_up"):
 			up_arrow.position += Vector2(0, -10)
 			var u_move = _move(Direction.UP)
@@ -171,3 +199,8 @@ func _is_valid_pos(dir):
 		normal_color = door_color	
 		return 0
 	return 0
+
+func _reset_path():
+	normal_color = Vector4(1,1,1,1)
+	button_pressed = false
+	pos = [0,0]
