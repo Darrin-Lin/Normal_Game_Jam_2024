@@ -13,8 +13,8 @@ const dy = [0, 0, -1, 1]
 const layer = 0
 const SOURCE_ID = 0
 
-const TILE_NULL = Vector2i(0, 0)
-const TILE_PATH = Vector2i(1, 0)
+const TILE_NULL    = Vector2i(0, 0)
+const TILE_PATH    = Vector2i(1, 0)
 const TILE_CORRECT = Vector2i(2, 0)
 const TILE_WRONG   = Vector2i(3, 0)
 

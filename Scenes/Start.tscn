@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://c68w4nhbvg3pi"]
+[gd_scene load_steps=3 format=3 uid="uid://ipu1tbfk3ku3"]
 
 [ext_resource type="Texture2D" uid="uid://dvv4ugwob1ikv" path="res://Assets/Images/background.png" id="1_pm37l"]
 [ext_resource type="Script" path="res://Scripts/GameDesription.gd" id="2_fjw74"]
@@ -6,7 +6,7 @@
 [node name="Node2D" type="Node2D"]
 
 [node name="Background" type="Sprite2D" parent="."]
-position = Vector2(400, 300)
+position = Vector2(400, 400)
 texture = ExtResource("1_pm37l")
 
 [node name="GameDesription" type="TextEdit" parent="."]
@@ -15,10 +15,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 50.0
-offset_top = 50.0
-offset_right = 750.0
-offset_bottom = 500.0
+offset_left = 48.0
+offset_top = 144.0
+offset_right = 748.0
+offset_bottom = 594.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "迷宮遊戲
@@ -36,10 +36,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 200.0
-offset_top = 525.0
-offset_right = 280.0
-offset_bottom = 565.0
+offset_left = 168.0
+offset_top = 656.0
+offset_right = 248.0
+offset_bottom = 696.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "Easy"
@@ -50,10 +50,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 600.0
-offset_top = 525.0
-offset_right = 680.0
-offset_bottom = 565.0
+offset_left = 592.0
+offset_top = 656.0
+offset_right = 672.0
+offset_bottom = 696.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "Normal"

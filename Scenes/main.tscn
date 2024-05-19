@@ -1,6 +1,5 @@
-[gd_scene load_steps=10 format=3 uid="uid://bounqyat3kfjb"]
+[gd_scene load_steps=9 format=3 uid="uid://bounqyat3kfjb"]
 
-[ext_resource type="Script" path="res://Scripts/main.gd" id="1_t80yg"]
 [ext_resource type="Texture2D" uid="uid://dvv4ugwob1ikv" path="res://Assets/Images/background.png" id="2_tdyyr"]
 [ext_resource type="Script" path="res://Scripts/arrows.gd" id="4_juxcj"]
 [ext_resource type="Texture2D" uid="uid://deolw346q432q" path="res://Assets/Images/up_arrow.png" id="5_7orqv"]
@@ -23,42 +22,38 @@ shader = ExtResource("5_rwyxl")
 shader_parameter/rgb = Color(1, 1, 1, 1)
 
 [node name="main" type="Node2D"]
-script = ExtResource("1_t80yg")
 
-[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
-
-[node name="background" type="Sprite2D" parent="ParallaxBackground"]
-position = Vector2(400, 300)
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(400, 400)
 texture = ExtResource("2_tdyyr")
-metadata/_edit_lock_ = true
 
 [node name="Arrows" type="Node" parent="."]
 script = ExtResource("4_juxcj")
 
 [node name="UpArrow" type="Sprite2D" parent="Arrows"]
 material = SubResource("ShaderMaterial_1g5wd")
-position = Vector2(400, 150)
+position = Vector2(400, 250)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("5_7orqv")
 
 [node name="DownArrow" type="Sprite2D" parent="Arrows"]
 material = SubResource("ShaderMaterial_h08ak")
 use_parent_material = true
-position = Vector2(400, 450)
+position = Vector2(400, 550)
 rotation = 3.14159
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("5_7orqv")
 
 [node name="LeftArrow" type="Sprite2D" parent="Arrows"]
 material = SubResource("ShaderMaterial_qtx0o")
-position = Vector2(250, 300)
+position = Vector2(250, 400)
 rotation = 4.71239
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("5_7orqv")
 
 [node name="RightArrow" type="Sprite2D" parent="Arrows"]
 material = SubResource("ShaderMaterial_naaxl")
-position = Vector2(550, 300)
+position = Vector2(550, 400)
 rotation = 1.5708
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("5_7orqv")

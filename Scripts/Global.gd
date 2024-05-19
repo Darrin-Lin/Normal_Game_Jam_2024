@@ -6,8 +6,9 @@ var map = 0
 # door = 2 button = 3
 
 enum DIFFICULTY {
-	EASY = 0,
-	NORMAL = 1
+	EASY   = 0,
+	NORMAL = 1,
+	HARD   = 2
 }
 
 var map_eazy = [
@@ -32,8 +33,24 @@ var map_normal = [
 	[0, 0, 0, 0, 2, 0, 0, 0, 0]
 ]
 
+var map_hard = [
+	[0, 1, 0, 0, 0, 0, 0, 0, 1, 3, 0],
+	[0, 1, 0, 1, 0, 1, 1, 1, 1, 1, 0],
+	[0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0],
+	[1, 1, 1, 1, 0, 1, 0, 1, 0, 1, 1],
+	[0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0],
+	[0, 1, 0, 1, 1, 1, 0, 1, 0, 1, 0],
+	[0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0],
+	[0, 1, 0, 1, 0, 1, 1, 1, 0, 1, 0],
+	[0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0],
+	[0, 1, 0, 1, 0, 1, 0, 1, 1, 1, 1],
+	[0, 1, 0, 0, 0, 2, 0, 0, 0, 0, 0]
+]
+
 func select_map(difficulty):
 	if difficulty == DIFFICULTY.EASY:
 		return map_eazy
 	elif difficulty == DIFFICULTY.NORMAL:
 		return map_normal
+	elif difficulty == DIFFICULTY.HARD:
+		return map_hard

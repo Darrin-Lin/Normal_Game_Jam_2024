@@ -1,10 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://iqv5mkgrqokh"]
 
+[ext_resource type="Texture2D" uid="uid://dvv4ugwob1ikv" path="res://Assets/Images/background.png" id="1_q1xk6"]
 [ext_resource type="Texture2D" uid="uid://22skc1ah37hr" path="res://Assets/Images/block_tilesheet.png" id="1_qhohx"]
 [ext_resource type="Script" path="res://Scripts/draw_path.gd" id="2_4ma84"]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_7fvjf"]
-load_path = "res://.godot/imported/background.png-98289422cd7d93003950872a7b97021f.ctex"
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sbk82"]
 texture = ExtResource("1_qhohx")
@@ -20,12 +18,9 @@ sources/0 = SubResource("TileSetAtlasSource_sbk82")
 
 [node name="draw" type="Node2D"]
 
-[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
-
-[node name="background" type="Sprite2D" parent="ParallaxBackground"]
-position = Vector2(400, 300)
-texture = SubResource("CompressedTexture2D_7fvjf")
-metadata/_edit_lock_ = true
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(400, 400)
+texture = ExtResource("1_q1xk6")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_vt63w")

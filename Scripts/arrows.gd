@@ -22,10 +22,10 @@ var col
 
 var button_pressed:bool = false
 
-var normal_color = Vector4(1,1,1,1)
-const error_color = Vector4(1,0,0,1)
+var normal_color   = Vector4(1,1,1,1)
+const error_color  = Vector4(1,0,0,1)
 const sucess_color = Vector4(0,1,0,1)
-const door_color = Vector4(0,0,1,1)
+const door_color   = Vector4(0,0,1,1)
 
 
 func _ready():
