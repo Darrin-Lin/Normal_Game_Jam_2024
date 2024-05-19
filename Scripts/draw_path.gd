@@ -26,6 +26,7 @@ var col
 var end = false
 
 func _ready():
+	randomize()
 	map = Global.select_map(Global.map)
 	row = map.size()
 	col = map[0].size()

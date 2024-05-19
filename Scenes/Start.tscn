@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://ipu1tbfk3ku3"]
+[gd_scene load_steps=3 format=3 uid="uid://c68w4nhbvg3pi"]
 
 [ext_resource type="Texture2D" uid="uid://dvv4ugwob1ikv" path="res://Assets/Images/background.png" id="1_pm37l"]
 [ext_resource type="Script" path="res://Scripts/GameDesription.gd" id="2_fjw74"]
@@ -24,7 +24,7 @@ text = "「迷盲」"
 offset_left = 100.0
 offset_top = 150.0
 offset_right = 700.0
-offset_bottom = 600.0
+offset_bottom = 644.0
 theme_override_font_sizes/normal_font_size = 20
 text = "走迷宮，但你看不到迷宮。迷宮從左上開始，右下結束。因為看不到路徑，因此在走迷宮時將提供一些提示：
   1. 如果碰到牆壁，會用「紅色」來提示
@@ -39,4 +39,5 @@ text = "走迷宮，但你看不到迷宮。迷宮從左上開始，右下結束
 難度選擇
 左：簡單（無門）
 右：普通
-上：困難"
+上：困難
+下：入門"
